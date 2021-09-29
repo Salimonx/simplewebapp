@@ -2,8 +2,11 @@ package com.mastery.java.task.rest;
 
 import com.mastery.java.task.dto.Employee;
 import com.mastery.java.task.service.EmployeeService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping("/employee")
@@ -23,18 +26,19 @@ public class EmployeeController {
     }
 
     @GetMapping("/{id}")
-    ResponseEntity<String> get(@PathVariable("id") Long id) {
-        return ResponseEntity.ok("<h1> Alive </h1>");
+    ResponseEntity<Employee> get(@PathVariable("id") Long id) {
+        return ResponseEntity.ok(employeeService.getOne(id));
     }
 
     @GetMapping
-    void getall() {
-
+    ResponseEntity<List<Employee>> getall() {
+        return ResponseEntity.ok(employeeService.getAll());
     }
 
     @DeleteMapping("/{id}")
-    void delete(@PathVariable("id") Long id) {
-
+    ResponseEntity<Long> delete(@PathVariable("id") Long id) {
+        employeeService.deleteOne(id);
+        return new ResponseEntity<>(id, HttpStatus.OK);
     }
 
     @PutMapping

@@ -1,4 +1,4 @@
-package com.mastery.java.task.mapper;
+package com.mastery.java.task.dao.mapper;
 
 import com.mastery.java.task.dto.Employee;
 import com.mastery.java.task.dto.Gender;
@@ -7,7 +7,7 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class CustomRowMapper implements RowMapper<Employee> {
+public class EmployeeRowMapper implements RowMapper<Employee> {
 
     @Override
     public Employee mapRow(ResultSet resultSet, int rowNum) throws SQLException {

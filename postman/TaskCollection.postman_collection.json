@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "251b023e-d733-4478-b68e-f0aab7d14dae",
+		"name": "TaskCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/simplewebapp/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"simplewebapp",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetOne",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/simplewebapp/employee/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"simplewebapp",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Paul\",\r\n    \"lastName\": \"Salimon\",\r\n    \"departmentId\": 1,\r\n    \"jobTitle\": \"Java Junior\",\r\n    \"gender\": \"MALE\",\r\n    \"dateOfBirth\": \"2020-05-04\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/simplewebapp/employee/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"simplewebapp",
+						"employee",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/simplewebapp/employee/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"simplewebapp",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Paul\",\r\n    \"lastName\": \"Salimon\",\r\n    \"departmentId\": 1,\r\n    \"jobTitle\": \"Java Junior\",\r\n    \"gender\": \"MALE\",\r\n    \"dateOfBirth\": \"2020-05-04\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/simplewebapp/employee/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"simplewebapp",
+						"employee",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

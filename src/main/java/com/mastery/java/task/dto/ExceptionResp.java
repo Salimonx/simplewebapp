@@ -2,7 +2,6 @@ package com.mastery.java.task.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.sun.istack.internal.NotNull;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -11,7 +10,7 @@ public class ExceptionResp {
     @JsonProperty("code")
     private int statusCode;
 
-    public ExceptionResp(String message, @NotNull HttpStatus statusCode) {
+    public ExceptionResp(String message, HttpStatus statusCode) {
         this.message = message;
         this.statusCode = statusCode.value();
     }
